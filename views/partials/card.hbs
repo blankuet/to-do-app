@@ -4,9 +4,15 @@
       <p class="task-label text-sm text-gray-500">{{label}}</p>
       <p class="task-due-date text-sm text-gray-400">{{due_date}}</p>
     </div>
-    <div class="task-status">
-      <span class="status {{#if status}}bg-green-500{{else}}bg-red-500{{/if}} text-white px-2 py-1 rounded">
-        {{#if status}}Done{{else}}Doing{{/if}}
-      </span>
-    </div>
+    <div class="task-status mt-2">
+        <span class="status 
+          {{#if (eq status 'done')}}bg-green-500{{/if}}
+          {{#if (eq status 'doing')}}bg-blue-500{{/if}}
+          {{#if (eq status 'to-do')}}bg-red-300{{/if}} 
+          text-white px-2 py-1 rounded shadow-lg">
+          {{#if (eq status 'done')}}Done{{/if}}
+          {{#if (eq status 'doing')}}Doing{{/if}}
+          {{#if (eq status 'to-do')}}To Do{{/if}}
+        </span>
+      </div>
   </div>

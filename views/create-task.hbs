@@ -1,20 +1,21 @@
-<h1 class="text-2x1 font-bold mb-5">Create Task</h1>
+<h1 class="text-2xl font-bold mb-5 mt-5 text-white text-center">Create Task</h1>
 
-<form action="/create-task" method="POST">
-    <label for="name"> Task
-        <input type="text" id="name">
+<form action="/create-task" method="POST" class="flex flex-col items-center space-y-4">
+    <label for="name" class="text-white w-full max-w-xs shadow-lg"> Task
+        <input type="text" id="name" name="name" class="mt-1 p-2 bg-gray-700 text-white rounded w-full">
     </label>
-    <label for="status">Status</label>
-    <select name="status" id="status">
-    <option value="to-do">To Do</option>
-    <option value="doing">Doing</option>
-    <option value="done">Done</option>
-    </select>
-    <label for="due_date">Due Date
-        <input type="date" id="due_date">
+    <label for="status" class="text-white w-full max-w-xs shadow-lg">Status
+        <select name="status" id="status" class="mt-1 p-2 bg-gray-700 text-white rounded w-full">
+            <option value="to-do">To Do</option>
+            <option value="doing">Doing</option>
+            <option value="done">Done</option>
+        </select>
     </label>
-    <label for="label">Label
-        <input type="text" id="label">
+    <label for="due_date" class="text-white w-full max-w-xs shadow-lg">Due Date
+        <input type="date" id="due_date" name="due_date" class="mt-1 p-2 bg-gray-700 text-white rounded w-full">
     </label>
-    <button class="p-2 bg-blue-300 text-white" type="submit">Create</button>
+    <label for="label" class="text-white w-full max-w-xs shadow-lg">Label
+        <input type="text" id="label" name="label" class="mt-1 p-2 bg-gray-700 text-white rounded w-full">
+    </label>
+    <button class="p-2 bg-blue-500 text-white rounded" type="submit">Create</button>
 </form>
