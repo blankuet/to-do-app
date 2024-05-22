@@ -1,0 +1,20 @@
+<h1 class="text-2x1 font-bold mb-5">Create Task</h1>
+
+<form action="/create-task" method="POST">
+    <label for="name"> Task
+        <input type="text" id="name">
+    </label>
+    <label for="status">Status</label>
+    <select name="status" id="status">
+    <option value="to-do">To Do</option>
+    <option value="doing">Doing</option>
+    <option value="done">Done</option>
+    </select>
+    <label for="due_date">Due Date
+        <input type="date" id="due_date">
+    </label>
+    <label for="label">Label
+        <input type="text" id="label">
+    </label>
+    <button class="p-2 bg-blue-300 text-white" type="submit">Create</button>
+</form>

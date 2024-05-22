@@ -1,0 +1,12 @@
+<div class="task p-4 bg-white rounded shadow-md flex items-center justify-between">
+    <div class="task-info">
+      <h3 class="task-name text-lg font-bold"><a href="/tasks/{{_id}}">{{name}}</a></h3>
+      <p class="task-label text-sm text-gray-500">{{label}}</p>
+      <p class="task-due-date text-sm text-gray-400">{{due_date}}</p>
+    </div>
+    <div class="task-status">
+      <span class="status {{#if status}}bg-green-500{{else}}bg-red-500{{/if}} text-white px-2 py-1 rounded">
+        {{#if status}}Done{{else}}Doing{{/if}}
+      </span>
+    </div>
+  </div>
