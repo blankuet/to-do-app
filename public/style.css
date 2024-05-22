@@ -3,7 +3,7 @@ input {
 }
 
 body {
-    background-image: url('./img/to-do-app-bg.jpg');
+    background-image: url('img/to-do-app-bg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

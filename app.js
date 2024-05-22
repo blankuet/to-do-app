@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const hbs = require('hbs');
+const path = require('path');
 const mongoose = require('mongoose');
 const Task = require('./models/Task.model');
 const bodyParser = require("body-parser");
@@ -13,7 +14,7 @@ mongoose
 
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
-app.use(express.static(__dirname + "/public"));
+app.use('/public', express.static(path.join(__dirname, 'public')));
 hbs.registerPartials(__dirname + '/views/partials');
 app.use(bodyParser.urlencoded({ extended: true }));
 hbs.registerHelper('eq', function (a, b) {
